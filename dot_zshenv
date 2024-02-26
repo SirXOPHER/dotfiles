@@ -1,0 +1,14 @@
+# Source Cargo (Rust package manager) environment variables
+. "$HOME/.cargo/env"
+
+# NVM directory
+export NVM_DIR="$HOME/.nvm"
+
+# Add Homebrew's executable directory to the front of the PATH
+export PATH=/usr/local/bin:$PATH
+
+# Allow Homebrew to put executables in /usr/local/sbin
+export PATH="/usr/local/sbin:$PATH"
+
+# Add Docker Desktop for Mac (docker) - to fix unknown command issue
+export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
