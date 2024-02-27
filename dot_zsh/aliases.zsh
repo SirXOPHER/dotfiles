@@ -27,7 +27,7 @@ alias ..5='cd ../../../../..'
 alias mv='mv -i'
 alias cp='cp -i'
 alias ln='ln -i'
-alias rm='rm -I -preserve-root'
+alias rm='rm -I --preserve-root'
 
 # IP addresses
 alias ip='dig +short myip.opendns.com @resolver1.opendns.com' # Your public IP address
