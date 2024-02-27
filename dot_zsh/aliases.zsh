@@ -49,3 +49,6 @@ alias dps='docker ps --format "table {{.Names}}\t{{.Status}}"' # List running Do
 alias cbr='git branch --show-current' # Show current Git branch
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete" # Recursively delete '.DS_Store' files
 alias path='echo -e ${PATH//:/\\n}' # Print each PATH entry on a separate line
+alias zshreload='source ~/.zshrc' # reload ZSH
+alias grep='grep --color=auto' # colorize `grep` output
+alias weather='curl v2.wttr.in'
