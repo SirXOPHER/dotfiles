@@ -1,0 +1,112 @@
+# Get editor completions based on the config schema (does not work for Warp!)
+# "$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts (when set to true)
+add_newline = false
+
+# Set command_timeout higher to allow longer-running commands to keep executing
+command_timeout = 2000
+
+###########
+# PRESETS #
+###########
+
+# Applied preset elements from: 'Nerd Font Symbols', 'Bracketed Segments'
+
+[aws]
+symbol = "  "
+format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
+
+[directory]
+read_only = " 󰌾"
+
+[docker_context]
+symbol = " "
+format = '\[[$symbol$context]($style)\]'
+
+[elixir]
+symbol = " "
+format = '\[[$symbol($version \(OTP $otp_version\))]($style)\]'
+
+[git_branch]
+symbol = " "
+format = '\[[$symbol$branch]($style)\]'
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style))'
+
+[gradle]
+format = '\[[$symbol($version)]($style)\]'
+
+[golang]
+symbol = " "
+
+[haskell]
+symbol = " "
+format = '\[[$symbol($version)]($style)\]'
+
+[java]
+symbol = " "
+format = '\[[$symbol($version)]($style)\]'
+
+[kotlin]
+symbol = " "
+format = '\[[$symbol($version)]($style)\]'
+
+[memory_usage]
+symbol = "󰍛 "
+format = '\[$symbol[$ram( | $swap)]($style)\]'
+
+[os]
+format = '\[[$symbol]($style)\]'
+
+[os.symbols]
+Amazon = " "
+Android = " "
+Arch = " "
+Fedora = " "
+Linux = " "
+Macos = " "
+Manjaro = " "
+Pop = " "
+Redhat = " "
+RedHatEnterprise = " "
+Ubuntu = " "
+Unknown = " "
+Windows = "󰍲 "
+
+[package]
+symbol = "󰏗 "
+format = '\[[$symbol$version]($style)\]'
+
+[php]
+symbol = " "
+format = '\[[$symbol($version)]($style)\]'
+
+[python]
+symbol = " "
+format = '\[[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)\]'
+disabled = true
+
+[ruby]
+symbol = " "
+format = '\[[$symbol($version)]($style)\]'
+
+[rust]
+symbol = " "
+format = '\[[$symbol($version)]($style)\]'
+
+[scala]
+symbol = " "
+format = '\[[$symbol($version)]($style)\]'
+
+[sudo]
+format = '\[[as $symbol]($style)\]'
+
+[time]
+format = '\[[$time]($style)\]'
+
+[username]
+format = '\[[$user]($style)\]'
+
+# End of applied presets
