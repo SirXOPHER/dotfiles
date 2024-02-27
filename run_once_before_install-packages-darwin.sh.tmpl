@@ -2,12 +2,14 @@
 #!/bin/bash
 
 brew bundle --no-lock --file=/dev/stdin <<EOF
+# 'brew tap'
 tap "clojure/tools"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "potatolabs/git-redate"
+# 'brew install'
 brew "bat"
 brew "chezmoi"
 brew "coreutils"
@@ -29,6 +31,7 @@ brew "tree"
 brew "watch"
 brew "clojure/tools/clojure"
 brew "potatolabs/git-redate/git-redate"
+# 'brew install --cask'
 cask "android-file-transfer"
 cask "appcleaner"
 cask "bitwarden"
@@ -64,5 +67,22 @@ cask "visual-studio-code"
 cask "vlc"
 cask "warp"
 cask "zoom"
+# 'vscode --install-extension'
+vscode "betterthantomorrow.calva"
+vscode "betterthantomorrow.calva-spritz"
+vscode "christian-kohler.path-intellisense"
+vscode "codeium.codeium"
+vscode "csantiago132.intellij-ish-darcula-theme"
+vscode "dbaeumer.vscode-eslint"
+vscode "dlahmad.dracula-for-rust-theme"
+vscode "hiukky.flate"
+vscode "k--kato.intellij-idea-keybindings"
+vscode "misophistful.borealis-theme"
+vscode "oderwat.indent-rainbow"
+vscode "pkief.material-icon-theme"
+vscode "ritwickdey.liveserver"
+vscode "rust-lang.rust-analyzer"
+vscode "rvest.vs-code-prettier-eslint"
+vscode "tamasfe.even-better-toml"
 EOF
 {{ end -}}
