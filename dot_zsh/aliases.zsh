@@ -27,7 +27,7 @@ alias ..5='cd ../../../../..'
 alias mv='mv -i'
 alias cp='cp -i'
 alias ln='ln -i'
-# alias rm='rm -I --preserve-root' # deactivated as it produces illegal option error
+alias rm='rm -i' # Note: '--preserve-root' option excluded as it produces illegal option error
 
 # IP addresses
 alias ip='dig +short myip.opendns.com @resolver1.opendns.com' # Your public IP address
