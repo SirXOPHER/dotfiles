@@ -3,6 +3,7 @@
 
 brew bundle --no-lock --file=/dev/stdin <<EOF
 # 'brew tap'
+tap "clojure-lsp/brew"
 tap "clojure/tools"
 tap "homebrew/bundle"
 # tap "homebrew/cask" # Tapping homebrew/cask is no longer typically necessary.
@@ -29,6 +30,7 @@ brew "stress"
 brew "the_silver_searcher"
 brew "tree"
 brew "watch"
+brew "clojure-lsp/brew/clojure-lsp-native"
 brew "clojure/tools/clojure"
 brew "potatolabs/git-redate/git-redate"
 # 'brew install --cask'
