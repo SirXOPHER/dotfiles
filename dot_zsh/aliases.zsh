@@ -43,6 +43,7 @@ alias bux='brew upgrade $(brew-upgrade-list)' # Update Homebrew casks (see funct
 # Command that will list all formulas that aren't dependents of any other formulas (leaves), and for each of them lists all of its dependencies:
 alias bleavedeps='brew leaves | xargs brew deps --formula --for-each | sed "s/^.*:/$(tput setaf 4)&$(tput sgr0)/"'
 # Alternate w/o xargs: brew deps --formula --for-each $(brew leaves) | sed "s/^.*:/$(tput setaf 4)&$(tput sgr0)/"
+alias housekeeping='brew autoremove && brew cleanup'
 
 # Miscellaneous
 alias dps='docker ps --format "table {{.Names}}\t{{.Status}}"' # List running Docker containers
