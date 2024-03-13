@@ -53,3 +53,5 @@ alias path='echo -e ${PATH//:/\\n}' # Print each PATH entry on a separate line
 alias zshreload='source ~/.zshrc' # reload ZSH
 alias grep='grep --color=auto' # colorize `grep` output
 alias weather='curl v2.wttr.in'
+alias clojure-language-version='clj -M -e "*clojure-version*"'
+alias clojure-cli-version='clj --version'
