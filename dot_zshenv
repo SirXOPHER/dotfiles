@@ -10,5 +10,8 @@ export PATH=/usr/local/bin:$PATH
 # Allow Homebrew to put executables in /usr/local/sbin
 export PATH="/usr/local/sbin:$PATH"
 
+# Put ~/.local/bin in the $PATH to make personal scripts executable from anywhere
+export PATH="$HOME/.local/bin:$PATH"
+
 # Add Docker Desktop for Mac (docker) - to fix unknown command issue
 export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
