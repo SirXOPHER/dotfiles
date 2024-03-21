@@ -55,3 +55,4 @@ alias grep='grep --color=auto' # colorize `grep` output
 alias weather='curl v2.wttr.in'
 alias clojure-language-version='clj -M -e "*clojure-version*"'
 alias clojure-cli-version='clj --version'
+alias pathlist="echo $PATH | tr ':' '\n'"
