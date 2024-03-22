@@ -1,0 +1,83 @@
+#!/bin/zsh
+
+# Check if the correct number of arguments are provided
+if [ "$#" -ne 2 ]; then
+    echo "Usage: $0 <solution_name> <source_code_project_name>"
+    exit 1
+fi
+
+# Assign arguments to variables
+solution_name="$1"
+source_code_project_name="$2"
+test_project_name="${source_code_project_name}.Tests"
+test_file_name="${source_code_project_name}Service.Tests"
+
+# Create a new directory for the project
+mkdir "$solution_name"
+cd "$solution_name" || exit
+
+# Initialize a new .NET solution
+dotnet new sln -n "$solution_name"
+
+# Add a C# project for source code to the solution
+dotnet new console -n "$source_code_project_name"
+dotnet sln add "$source_code_project_name/$source_code_project_name.csproj"
+
+# Add a C# project for unit tests to the solution
+dotnet new nunit -n "$test_project_name"
+dotnet sln add "$test_project_name/$test_project_name.csproj"
+
+# Set up necessary dependencies and configurations for unit testing
+dotnet add "$test_project_name" reference "$source_code_project_name"
+
+# Optionally, generate initial source code and test code files
+
+# Add minimal source code to the project
+rm $source_code_project_name/Program.cs
+cat <<EOT >> $source_code_project_name/${source_code_project_name}Service.cs
+namespace Main.Services
+{
+    public class ${source_code_project_name}Service
+    {
+            public static void Main(string[] args)
+            {
+                // do nothing
+            }
+
+            public int GimmeFive(int betterBeFive)
+            {
+                throw new NotImplementedException("Not implemented.");
+            }
+    }
+}
+EOT
+
+# Add minimal test code to the project
+rm $test_project_name/UnitTest1.cs
+cat <<EOT >> $test_project_name/$test_file_name.cs
+using Main.Services;
+
+namespace Main.UnitTests.Services
+{
+    [TestFixture]
+    public class ${source_code_project_name}_GimmeFiveShould
+    {
+        // fields
+
+        [SetUp]
+        public void SetUp()
+        {
+            // setup goes here...
+        }
+
+        [Test]
+        public void GimmeFive_InputIs5_Returns5()
+        {
+            var sut = new ${source_code_project_name}Service();
+            var result = sut.GimmeFive(5);
+
+            Assert.That(result, Is.EqualTo(5));
+        }
+    }
+}
+EOT
