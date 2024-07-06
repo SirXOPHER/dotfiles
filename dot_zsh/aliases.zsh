@@ -37,7 +37,7 @@ alias ipv6='curl -6 https://ifconfig.co' # Your public IPv6 address
 alias ifactive="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'" # Show active network interfaces
 
 # Homebrew
-alias buu='brew update && brew upgrade' # Update Homebrew formulae and upgrade installed ones
+alias buu='brew update --verbose && brew upgrade' # Update Homebrew formulae and upgrade installed ones
 alias bo='brew outdated --cask --greedy' # List Homebrew casks with available updates
 alias bux='brew upgrade $(brew-upgrade-list)' # Update Homebrew casks (see function)
 # Command that will list all formulas that aren't dependents of any other formulas (leaves), and for each of them lists all of its dependencies:
